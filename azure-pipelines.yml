@@ -10,7 +10,7 @@ trigger:
      
 
 pool:
-  name: 'ubuntu-aws'
+  name: 'MyAgent'
 
 steps:
 - task: UseNode@1
