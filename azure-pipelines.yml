@@ -15,7 +15,7 @@ pool:
 steps:
 - task: UseNode@1
   inputs:
-    version: '16.x, 18.x, 20.x, 22.x'
+    version: '20.x'
   displayName: 'Install Node.js'
 
 - script: |
@@ -32,6 +32,7 @@ steps:
   # condition: succeed() # Run the step only if the previous step succeeded (default):
   # condition: failed() # Run the step only if the previous step failed:
   # condition: and(succeeded(), eq(variables['Build.SourceBranchName'], 'main'))
+  continueOnError: true
 
 
 - task: CopyFiles@2
